@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">Calculadora de TLP</string>
+    <string name="percentAoAno">% a.a.</string>
+    <string name="percentAoMes">% a.m.</string>
+    <string name="CDC">CDC do Banco</string>
+    <string name="BNDES">Spread do BNDES</string>
+    <string name="TLP">TLP do mês</string>
+    <string name="calcular_ipca"> CALCULAR IPCA </string>
+    <string name="calcular_juros">CALCULAR JUROS</string>
+    <string name="reset">RESET</string>
+    <string name="taxa_de_juros">TAXA DE JUROS</string>
+    <string name="startResult">0,0000</string>
+    <string name="startResultAM">0,00</string>
+    <string name="tx777_bndes">tx777 BNDES</string>
+    <string name="ipca_mediana_focus">IPCA (mediana FOCUS)</string>
+    <string name="componente_variavel_ipca">Componente Variável (IPCA)</string>
+    <string name="info">INFO</string>
+    <string name="calcular_fixo">DECOMPOR TAXA</string>
+    <string name="componente_fixo">Componente Fixo</string>
+    <string name="volta">VOLTA</string>
+    <string name="texto_infoCDC"><b>CDC: </b>é a comissão da instituição financeira repassadora.</string>
+    <string name="texto_infoSpread"><b>Spread: </b>indicado na Resolução do BNDES correspondente à linha
+        de crédito a ser contratada.</string>
+    <string name="texto_infoTLP"><b>TLP: </b>resultado da multiplicação do IPCA anual pela Taxa Pre, definida mensalmente
+        pelo Banco Central. A TLP varia mensalmente com a Taxa Pre, e a todo instante com as varições do IPCA. O indicado
+        a se utilizar neste cálculo é a mediana do Relatório FOCUS para o presente ano.</string>
+    <string name="texto_infoJuros"><b>Taxa de Juros: </b>é a taxa anual que poderá ser apresentada ao cliente para efeito de
+        simulação.</string>
+    <string name="texto_info777"><b>Taxa777 BNDES: </b>é a Taxa Pré, definida mensalmente pelo Banco Central, e que pode ser
+        encontrata entre as moedas contratuais no site do BNDES. A taxa é uma média das NTN emitidas pelo Tesouro Nacional
+        com vencimento em 5 anos, ajustadas por um fator redutor até o ano de 2022. Sabendo-se esta taxa, é possível calcular
+        o componente fixo da taxa de juros (a parte da TLP correspondente à Taxa Pre é fixada após a contratação da operação,
+        incorporando o componente fixo, juntamente com o CDC da instituição financeira e o Spread do BNDES). </string>
+    <string name="texto_infoIPCA"><b>IPCA: </b>Este campo é utilizado para simulações de alterações do IPCA. Com ele é
+        igualmente possível calcular o Componente Fixo pós-contratual da Taxa de Juros.</string>
+    <string name="texto_infoFixo"><b>Componente Fixo: </b>parte fixa da Taxa de Juros após a contratação. Composta pelo CDC da
+        instituição financeira, pelo Spread do BNDES, e pela Taxa Pre vigente no mês em que foi firmado o contrato.</string>
+    <string name="texto_infoVariavel"><b>Componente Variável: </b>campo de verificação que indica qual o IPCA anual foi utilizado na formação da Taxa de Juros, calculada a partir da
+            Taxa Pre.</string>
+    <string name="editHint">0.0</string>
+
+</resources>

@@ -1,0 +1,472 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="32dp"
+            android:layout_marginStart="32dp"
+            android:text="@string/CDC"
+            android:textColor="@color/colorLabel"
+            android:textSize="18sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/edit_CDC"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="32dp"
+            android:layout_marginStart="32dp"
+            android:text="@string/BNDES"
+            android:textColor="@color/colorLabel"
+            android:textSize="18sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/edit_BNDES"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
+            android:text="@string/TLP"
+            android:textColor="@color/colorLabel"
+            android:textSize="18sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/edit_TLP"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <EditText
+            android:id="@+id/edit_CDC"
+            android:layout_width="69dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="240dp"
+            android:layout_marginStart="240dp"
+            android:layout_marginTop="32dp"
+            android:gravity="end"
+            android:hint="@string/editHint"
+            android:inputType="numberDecimal|numberSigned"
+            android:textAlignment="gravity"
+            android:textColor="@color/colorText"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/edit_BNDES"
+            android:layout_width="69dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="240dp"
+            android:layout_marginStart="240dp"
+            android:gravity="end"
+            android:hint="@string/editHint"
+            android:inputType="numberDecimal|numberSigned"
+            android:textAlignment="gravity"
+            android:textColor="@color/colorText"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edit_CDC" />
+
+        <EditText
+            android:id="@+id/edit_TLP"
+            android:layout_width="69dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="16dp"
+            android:gravity="end"
+            android:hint="@string/editHint"
+            android:inputType="numberDecimal|numberSigned"
+            android:textAlignment="gravity"
+            android:textColor="@color/colorText"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toStartOf="@+id/textView6"
+            app:layout_constraintTop_toBottomOf="@+id/text_Juros" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
+            android:text="@string/percentAoAno"
+            android:textColor="@color/colorLabel"
+            android:textSize="18sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/textView1"
+            app:layout_constraintStart_toEndOf="@+id/edit_CDC" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
+            android:text="@string/percentAoAno"
+            android:textColor="@color/colorLabel"
+            android:textSize="18sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/textView2"
+            app:layout_constraintStart_toEndOf="@+id/edit_BNDES" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:text="@string/percentAoAno"
+            android:textColor="@color/colorLabel"
+            android:textSize="18sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/textView3"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <Button
+            android:id="@+id/button_Juros"
+            android:layout_width="132dp"
+            android:layout_height="47dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="24dp"
+            android:background="@color/colorPrimary"
+            android:text="@string/calcular_juros"
+            android:textColor="@color/colorButtonText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edit_IPCA" />
+
+        <Button
+            android:id="@+id/button_Reset"
+            android:layout_width="67dp"
+            android:layout_height="47dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:background="@color/colorBackgroundReset"
+            android:text="@string/reset"
+            app:layout_constraintBaseline_toBaselineOf="@+id/button_Juros"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
+            android:text="@string/taxa_de_juros"
+            android:textColor="@color/colorLabel"
+            android:textSize="18sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/text_Juros"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/text_Juros"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/startResult"
+            android:textColor="@color/colorResult"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/textView7"
+            app:layout_constraintTop_toBottomOf="@+id/button_Juros" />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
+            android:text="@string/percentAoAno"
+            android:textColor="@color/colorLabel"
+            android:textSize="18sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/textView7"
+            app:layout_constraintStart_toEndOf="@+id/text_Juros" />
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="32dp"
+            android:layout_marginStart="32dp"
+            android:text="@string/tx777_bndes"
+            android:textColor="@color/colorLabel"
+            android:textSize="18sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/edit_777"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <EditText
+            android:id="@+id/edit_777"
+            android:layout_width="69dp"
+            android:layout_height="0dp"
+            android:layout_marginLeft="240dp"
+            android:layout_marginStart="240dp"
+            android:gravity="end"
+            android:hint="@string/editHint"
+            android:inputType="numberDecimal|numberSigned"
+            android:textAlignment="gravity"
+            android:textColor="@color/colorText"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edit_BNDES" />
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
+            android:text="@string/percentAoAno"
+            android:textColor="@color/colorLabel"
+            android:textSize="18sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/textView9"
+            app:layout_constraintStart_toEndOf="@+id/edit_777" />
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="190dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginStart="32dp"
+            android:text="@string/ipca_mediana_focus"
+            android:textColor="@color/colorLabel"
+            android:textSize="18sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/edit_IPCA"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <EditText
+            android:id="@+id/edit_IPCA"
+            android:layout_width="69dp"
+            android:layout_height="0dp"
+            android:layout_marginLeft="240dp"
+            android:layout_marginStart="240dp"
+            android:gravity="end"
+            android:hint="@string/editHint"
+            android:inputType="numberDecimal|numberSigned"
+            android:textAlignment="gravity"
+            android:textColor="@color/colorText"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edit_777" />
+
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
+            android:text="@string/percentAoAno"
+            android:textColor="@color/colorLabel"
+            android:textSize="18sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/textView11"
+            app:layout_constraintStart_toEndOf="@+id/edit_IPCA" />
+
+        <Button
+            android:id="@+id/button_Decomp"
+            android:layout_width="132dp"
+            android:layout_height="47dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="24dp"
+            android:background="@color/colorPrimary"
+            android:text="@string/calcular_fixo"
+            android:textColor="@color/colorButtonText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edit_TLP" />
+
+        <TextView
+            android:id="@+id/textView13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/componente_fixo"
+            android:textColor="@color/colorLabel"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button_Decomp" />
+
+        <TextView
+            android:id="@+id/text_Fixo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:text="@string/startResult"
+            android:textColor="@color/colorResult"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBaseline_toBaselineOf="@+id/textView13"
+            app:layout_constraintEnd_toStartOf="@+id/textView14" />
+
+        <TextView
+            android:id="@+id/textView14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:text="@string/percentAoAno"
+            android:textColor="@color/colorLabel"
+            android:textSize="18sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/textView13"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/textView15"
+            android:layout_width="186dp"
+            android:layout_height="46dp"
+            android:layout_marginBottom="32dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="32dp"
+            android:text="@string/componente_variavel_ipca"
+            android:textAlignment="center"
+            android:textColor="@color/colorLabel"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView13" />
+
+        <TextView
+            android:id="@+id/text_Variavel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:text="@string/startResult"
+            android:textColor="@color/colorResult"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBaseline_toBaselineOf="@+id/textView15"
+            app:layout_constraintEnd_toStartOf="@+id/textView16" />
+
+        <TextView
+            android:id="@+id/textView16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:text="@string/percentAoAno"
+            android:textColor="@color/colorLabel"
+            android:textSize="18sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/textView15"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <Button
+            android:id="@+id/button_Info"
+            android:layout_width="67dp"
+            android:layout_height="43dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:background="@color/colorBackgroundInfo"
+            android:text="@string/info"
+            app:layout_constraintBaseline_toBaselineOf="@+id/button_Decomp"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/text_JurosAM"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorResultAM"
+            android:text="@string/startResultAM"
+            app:layout_constraintBaseline_toBaselineOf="@+id/text_Juros"
+            app:layout_constraintEnd_toStartOf="@+id/text_JurosAM2" />
+
+        <TextView
+            android:id="@+id/text_JurosAM2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:text="@string/percentAoMes"
+            android:textColor="@color/colorResultAM"
+            app:layout_constraintBaseline_toBaselineOf="@+id/text_JurosAM"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/text_ipcaAM"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="120dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/startResultAM"
+            android:textColor="@color/colorResultAM"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/text_ipcaAM2"
+            app:layout_constraintTop_toBottomOf="@+id/text_Variavel"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/text_ipcaAM2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:text="@string/percentAoMes"
+            android:textColor="@color/colorResultAM"
+            app:layout_constraintBaseline_toBaselineOf="@+id/text_ipcaAM"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/text_FixoAM"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/startResultAM"
+            android:textColor="@color/colorResultAM"
+            app:layout_constraintEnd_toStartOf="@+id/text_FixoAM2"
+            app:layout_constraintTop_toBottomOf="@+id/text_Fixo" />
+
+        <TextView
+            android:id="@+id/text_FixoAM2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:text="@string/percentAoMes"
+            android:textColor="@color/colorResultAM"
+            app:layout_constraintBaseline_toBaselineOf="@+id/text_FixoAM"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/text_TLP"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp"
+            android:textColor="@color/colorTaxa"
+            app:layout_constraintBaseline_toBaselineOf="@+id/textView3"
+            app:layout_constraintStart_toEndOf="@+id/textView3" />
+
+        <TextView
+            android:id="@+id/text_777"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp"
+            android:textColor="@color/colorTaxa"
+            app:layout_constraintBaseline_toBaselineOf="@+id/textView9"
+            app:layout_constraintStart_toEndOf="@+id/textView9" />
+
+
+
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>
